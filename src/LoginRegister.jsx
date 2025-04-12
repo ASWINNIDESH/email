@@ -9,88 +9,128 @@ export const LoginRegister = ({ setUser }) => {
   const [registerPassword, setRegisterPassword] = useState("");
 
   return (
-    <> <div>
-      <style>
-        {`
-          label {
-            display: block;
-            margin: 10px 0;
-          }
-          input {
-            margin-left: 10px;
-          }
-          button {
-            margin-top: 10px;
-          }
-          div {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin: 20px;
-          }
-          h3 {
-            margin: 0;
-          }
-          button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-          }
-          button:hover {
-            background-color: #0056b3;
-          }
-          input[type="email"],
-          input[type="password"],
-          input[type="text"] {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            width: 100%;
-          }
-          input[type="email"]:focus,
-          input[type="password"]:focus,
-          input[type="text"]:focus {
-            border-color: #007bff;
-            outline: none;
-          }
-          textarea {
-            width: 100%;
-            height: 100px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-          }
-          textarea:focus {
-            border-color: #007bff;
-            outline: none;
-          }
-          .error {
-            color: red;
-            margin-top: 10px;
-          }
-          .success {
-            color: green;
-            margin-top: 10px;
-          }
-          .loading {
-            color: blue;
-            margin-top: 10px;
-          }
-          .hidden {
-            display: none;
-          }
-          .visible {
-            display: block;
-          }
-          .flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-          }
-        `}  
-      </style>
+    <> <style>
+      {`
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+        input {
+          display: block;
+          margin-bottom: 10px;
+        }
+        button {
+          margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+          width: 100%;
+          padding: 8px;
+          box-sizing: border-box;
+        }
+        button {
+          background-color: #007bff;
+          color: white;
+          border: none;
+          padding: 10px 15px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #0056b3;
+        }
+        button:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+        }
+        label {
+          font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+          border-color: #007bff;
+          outline: none;
+        }
+        input[type="text"]:disabled,
+        input[type="email"]:disabled,
+        input[type="password"]:disabled {
+          background-color: #f5f5f5;
+          cursor: not-allowed;
+        }
+        button:focus {
+          outline: none;
+          box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+        button:active {
+          background-color: #0056b3;
+          box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+        button:disabled:hover {
+          background-color: #ccc;
+        }
+        button:disabled:active {
+          background-color: #ccc;
+        }
+        button:disabled:focus {
+          box-shadow: none;
+        }
+        button:disabled:active {
+          box-shadow: none;
+        }
+        button:disabled:hover {
+          cursor: not-allowed;
+        }
+        button:disabled:focus {
+          outline: none;
+        }
+        button:disabled:active {
+          outline: none;
+        }
+        button:disabled:focus {
+          box-shadow: none;
+        }
+        button:disabled:active {
+          box-shadow: none;
+        }
+        button:disabled:hover {
+          cursor: not-allowed;
+        }
+        button:disabled:focus {
+          outline: none;
+        }
+        button:disabled:active {
+          outline: none;
+        } 
+        button:disabled:focus {
+          box-shadow: none;
+        }
+        button:disabled:active {
+          box-shadow: none;
+        }
+        button:disabled:hover {
+          cursor: not-allowed;
+        }
+        button:disabled:focus {
+          outline: none;
+        }
+        button:disabled:active {
+          outline: none;
+        }
+        button:disabled:focus {
+          box-shadow: none;
+        }
+        button:disabled:active {
+          box-shadow: none;
+        }
+      `}       
+    </style>
       <label>
         Email:
         <input
@@ -191,7 +231,6 @@ export const LoginRegister = ({ setUser }) => {
       >
         Register
       </button>
-      </div>
     </>
   );
 };
